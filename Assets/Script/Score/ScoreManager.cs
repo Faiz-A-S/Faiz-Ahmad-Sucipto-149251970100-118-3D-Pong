@@ -32,7 +32,6 @@ public class ScoreManager : MonoBehaviour
     public void AddP1Score(int increment)
     {
         scoreP1 += increment;
-        ball.ResetBall();
         if(scoreP1 >= maxScore)
         {
             Dead(gawangP1,P1);
@@ -42,7 +41,6 @@ public class ScoreManager : MonoBehaviour
     public void AddP2Score(int increment)
     {
         scoreP2 += increment;
-        ball.ResetBall();
         if(scoreP2 >= maxScore)
         {
             Dead(gawangP2,P2);
@@ -52,7 +50,6 @@ public class ScoreManager : MonoBehaviour
     public void AddP3Score(int increment)
     {
         scoreP3 += increment;
-        ball.ResetBall();
         if(scoreP3 >= maxScore)
         {
             Dead(gawangP3,P3);
@@ -62,7 +59,6 @@ public class ScoreManager : MonoBehaviour
     public void AddP4Score(int increment)
     {
         scoreP4 += increment;
-        ball.ResetBall();
         if(scoreP4 >= maxScore)
         {
             Dead(gawangP4,P4);

@@ -4,19 +4,16 @@ using UnityEngine;
 
 public class BolaGerak : MonoBehaviour
 {
-    public Vector3 kecepatan;
+    public List<Vector3> kecepatan;
     public Rigidbody ball;
+    public BallManager random;
 
     // Start is called before the first frame update
     void Start()
     {
         ball = GetComponent<Rigidbody>();
-        ball.AddForce(kecepatan, ForceMode.Impulse);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        int randoms = random.random;
+        Debug.Log(randoms);
+        ball.AddForce(kecepatan[randoms], ForceMode.Impulse);
     }
 }

@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class BallController : MonoBehaviour
 {
-    public Vector3 resetPos;
-    public Rigidbody ball;
+    public GameObject bola;
+    public int timerKembali;
 
-    public void ResetBall()
+    private void OnTriggerEnter(Collider collision)
     {
-        transform.position = new Vector3(resetPos.x,resetPos.y,-2.65f);
+        Destroy(bola);
     }
 }
