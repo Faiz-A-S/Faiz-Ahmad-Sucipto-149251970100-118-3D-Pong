@@ -5,10 +5,11 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     public GameObject bola;
-    public int timerKembali;
+    public SoundManager sm;
 
     private void OnTriggerEnter(Collider collision)
     {
+        sm.PlayScore();
         Destroy(bola);
     }
 }

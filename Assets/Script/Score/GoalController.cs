@@ -15,6 +15,7 @@ public class GoalController : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 1;
     }
     private void OnTriggerEnter(Collider collision)
     {

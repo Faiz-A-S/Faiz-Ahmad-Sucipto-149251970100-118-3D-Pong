@@ -20,12 +20,15 @@ public class ScoreManager : MonoBehaviour
     public GameObject P3;
     public GameObject P4;
     public GameObject playerLeft;
-
+    public Pemenang pemenang;
+    public SoundManager sm;
+    
     public void Update()
     {
+        //pemenang.text = manager;
         if(playerLeft.transform.childCount == 1)
         {
-            GameOver();
+            pemenang.GameOver(playerLeft.transform.GetChild(0).name);
         }
     }
 
@@ -67,13 +70,8 @@ public class ScoreManager : MonoBehaviour
 
     public void Dead(Collider gawang,GameObject player)
     {
+        sm.PlayDead();
         gawang.GetComponent<Collider>().isTrigger = false;
         Destroy(player);
     }
-
-    public void GameOver() 
-    { 
-        Debug.Log("SELESAI");
-        //SceneManager.LoadScene("Main Menu");
-    } 
 }
